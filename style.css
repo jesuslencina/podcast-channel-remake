@@ -1,0 +1,358 @@
+/* GENERAL */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+button {
+  background-color: #00f3bb;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border: none;
+  font-size: medium;
+  width: 75%;
+  align-self: center;
+}
+
+/* DEFAULT PADDING */
+header,
+main,
+section {
+  padding: 1rem;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header nav .toggle {
+  position: absolute;
+  right: 0.05rem;
+  opacity: 0;
+}
+
+header nav .close-menu {
+  display: none;
+}
+
+.items {
+  background-color: #0000ec;
+  color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  margin: 0;
+  width: 100%;
+  padding-left: 0;
+}
+
+.items li {
+  padding: 0.75rem;
+}
+
+.toggle:not(:checked) ~ .items {
+  display: none;
+}
+
+.toggle:checked ~ .close-menu {
+  display: inline;
+}
+
+.toggle:checked ~ .burger-menu {
+  display: none;
+}
+
+/* HERO */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main h1 {
+  margin: 1rem 0;
+}
+
+main h1 .break-mobile {
+  display: block;
+}
+
+main h1 .blue {
+  color: #0000ec;
+}
+
+main p {
+  font-size: 0.8rem;
+}
+
+/* EPISODES SECTION */
+
+.episodes {
+  background-color: #0000ec;
+  background: linear-gradient(225deg, #245595 0%, #0000a3 100%);
+  clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+  padding: 6vh 1rem 34vh;
+}
+
+.episodes h2 {
+  color: white;
+  margin: 0.5rem 0;
+}
+
+/* WHERE WE COME FROM SECTION */
+
+.where-we-come-from {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-25%);
+}
+
+/* GUESTS SECTION */
+
+.guests {
+  margin-top: -75%;
+  padding: 0;
+}
+
+.guests h2 {
+  padding: 0 1rem;
+}
+
+.guests .fotos {
+  display: flex;
+  flex-direction: column;
+}
+
+/* OUR TOPICS SECTION */
+.our-topics .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-topics .container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.our-topics .container article strong {
+  margin-top: 0.75rem;
+}
+
+/* SUBSCRIBE SECTION */
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0000ec;
+  background: linear-gradient(225deg, #245595 0%, #0000a3 100%);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  padding: 10vh 0 6vh;
+}
+
+.subscribe h2 {
+  color: white;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh 0;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  font-size: 1.15rem;
+}
+
+/*** DESKTOP VERSION ***/
+@media screen and (min-width: 721px) {
+  header,
+  footer {
+    padding: 1rem 6rem;
+  }
+
+  main,
+  section {
+    padding: 3rem 12rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+    color: white;
+  }
+
+  header img {
+    width: 2.25rem;
+  }
+
+  header .toggle,
+  header .burger-menu {
+    display: none;
+  }
+
+  .items {
+    background-color: transparent;
+    color: black;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    padding-left: 0;
+  }
+
+  .items li {
+    margin: 0 3rem;
+    cursor: pointer;
+  }
+
+  .items li:last-child {
+    margin-right: 0;
+  }
+
+  .items li:hover {
+    color: #00f3bb;
+    text-decoration: line-through;
+  }
+
+  .toggle:not(:checked) ~ .items {
+    display: flex;
+  }
+
+  main {
+    margin-top: 18vh;
+  }
+
+  main h1 .break-mobile {
+    display: inline;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+
+  main p .break-desktop {
+    display: block;
+  }
+
+  main button {
+    align-self: flex-start;
+    width: fit-content;
+    padding: 0.75rem 3rem;
+    font-size: 1.05rem;
+  }
+
+  .episodes {
+    padding: 14vh 12rem 30vh;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  }
+
+  .episodes .iframes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+  }
+
+  .where-we-come-from {
+    flex-direction: row;
+    align-items: center;
+    transform: translateY(-25%);
+  }
+
+  .where-we-come-from .phone {
+    width: 38.5vw;
+  }
+
+  .guests {
+    margin-top: -20%;
+  }
+
+  .guests h2 {
+    margin-left: 12rem;
+  }
+
+  .guests .fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .guests .fotos img {
+    width: 100%;
+  }
+
+  .our-topics {
+    margin-top: -2.5%;
+  }
+
+  .our-topics .container {
+    flex-direction: row;
+  }
+
+  .subscribe {
+    padding: 24vh 0;
+  }
+
+  .subscribe button {
+    width: 20%;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer .container {
+    width: 12vw;
+    padding: 1.5vh 0;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+}
