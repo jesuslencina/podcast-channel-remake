@@ -4,7 +4,7 @@
 
 This is a remake of my first webpage ever made; The first project for Acamica's frontend bootcamp.
 
-Since I was entirely new to webdev, the project I did back then (around 2 years ago) was very messy, so I decided to give it another try.
+Since I was entirely new to webdev, the project I did back in 2020 was very messy, so I decided to give it another try.
 
 While this version was made from scratch, I did follow the same prototype as the first version, and stuck to the technologies I was supposed to use back then (plain HTML and CSS).
 
